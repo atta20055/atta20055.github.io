@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #eef4ff; color: #172033; }
+main { max-width: 760px; margin: auto; padding: 44px 18px; }
+header { text-align: center; }
+h1 { color: #2563eb; font-size: 32px; }
+h2 { margin-top: 26px; }
+.planner { margin-top: 46px; padding: 26px; background: white; border-radius: 14px; box-shadow: 0 6px 22px #1b36501a; }
+.planner h2 { margin-top: 0; color: #2563eb; }
+form { display: grid; gap: 10px; margin-top: 22px; }
+label { font-weight: 600; }
+input, select, button { font: inherit; padding: 11px; border-radius: 7px; }
+input, select { border: 1px solid #c6d0e0; width: 100%; }
+button { border: 0; background: #2563eb; color: white; cursor: pointer; }
+button:hover { background: #1d4ed8; }
+.toolbar { display: flex; align-items: center; gap: 12px; margin-top: 24px; }
+.toolbar select { width: auto; }
+ul { list-style: none; padding: 0; }
+li { display: flex; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid #e5e7eb; }
+li .task-text { flex: 1; overflow-wrap: anywhere; }
+li .task-text small { display: block; color: #64748b; margin-top: 4px; }
+li.completed .task-text { text-decoration: line-through; opacity: .6; }
+li input[type="checkbox"] { width: 20px; height: 20px; }
+li button { background: #dc2626; padding: 8px 10px; }
+li button:hover { background: #b91c1c; }
+#empty-message { color: #64748b; }
+@media (max-width: 480px) { .planner { padding: 18px; } h1 { font-size: 27px; } }

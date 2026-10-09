@@ -1,24 +1,42 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Atta's Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: #eef4ff;
-            padding: 50px;
-        }
-        h1 { color: #2563eb; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atta's Website | Student Study Planner</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <h2>About Me</h2>
-    <p>I'm a Computer Science student at
-    George Washington University.</p>
-    <h2>My Interests</h2>
-    <p>Technology, programming, and soccer.</p>
+  <main>
+    <header>
+      <h1>Welcome to My Website!</h1>
+      <h2>About Me</h2>
+      <p>I'm a Computer Science student at George Washington University.</p>
+      <h2>My Interests</h2>
+      <p>Technology, programming, and soccer.</p>
+    </header>
+    <section class="planner" aria-labelledby="planner-title">
+      <h2 id="planner-title">Student Study Planner</h2>
+      <p>Keep track of assignments and deadlines.</p>
+      <form id="task-form">
+        <label for="task-name">Assignment</label>
+        <input id="task-name" type="text" placeholder="e.g., Study for calculus quiz" maxlength="100" required>
+        <label for="due-date">Due date</label>
+        <input id="due-date" type="date" required>
+        <button type="submit">Add Task</button>
+      </form>
+      <div class="toolbar">
+        <label for="task-filter">Show</label>
+        <select id="task-filter">
+          <option value="all">All tasks</option>
+          <option value="active">Unfinished</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+      <ul id="task-list" aria-live="polite"></ul>
+      <p id="empty-message">No assignments yet. Add your first task!</p>
+    </section>
+  </main>
 </body>
 </html>
